@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Poppins: "Poppins", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+  --Open-Sans: "Open Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.full-home {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  min-height: 100px;
+  background-color: black;
+  color: white;
+  align-items: center;
+}
+.name-box  {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+
+}
+.name-small{
+    white-space: nowrap;
+    margin: 0 10px;
+    font-family: var(--Poppins);
+    font-size: 15px;
+    font-weight: bold;
+}
+.name-big > h1{
+    font-family: var(--Poppins);
+    font-size: 55px;
+    color: blue;
+}
+.nav > nav > .nav-tags {
+  font-family: var(--Roboto);
+  text-decoration: none;
+  color: rgb(0, 200, 250);
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 18px;
+  position: relative;
+  margin: 10px;
+}
+.nav-tags::after {
+  content: "";
+  position: absolute;
+  height: 20%;
+  width: 0%;
+  bottom: -15%;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+}
+.nav-tags:hover::after {
+  width: 100%;
+  transition: 0.3s linear all;
+}
+.home-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+.home-in {
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+  border: 2px solid aqua;
+  box-shadow: 2px 2px 20px rgba(6, 237, 253, 0.9);
+  border-radius: 5px;
+  align-items: center;
+  padding: 15px;
+  animation: 5s linear infinite blower,uper 5s infinite linear;
+}
+@keyframes blower {
+  25% {
+    border: 3px solid aqua;
+    box-shadow: 3px 3px 30px rgba(6, 237, 253, 0.9);
+
+  }
+  50% {
+    border: 5px solid aqua;
+    box-shadow: 5px 5px 50px rgba(6, 237, 253, 0.9);
+  }
+  75%{
+    border: 7px solid aqua;
+    box-shadow: 7px 7px 70px rgba(6, 237, 253, 0.9);
+  }
+}
+
+@keyframes uper{
+   25%{
+     transform: translateY(20px);
+   }
+   50%{
+    transform: translateY(0px);
+   }
+   75%{
+    transform: translateY(-20px);
+   }
+   100%{
+    transform: translateY(0px);
+   }
+}
+
+.home-profile-img > img {
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  border: 4px solid aqua;
+}

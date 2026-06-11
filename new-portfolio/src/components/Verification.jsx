@@ -8,6 +8,7 @@ const Verification = () => {
   const loading = useRef(null);
   const warning = useRef(null);
   const dangerSign = useRef(null);
+  const Access = useRef(null);
   const navigate = useNavigate();
   const [auth, setAuth] = useState();
 
@@ -20,6 +21,7 @@ const Verification = () => {
       loading.current.style.backgroundColor = "lime";
       warning.current.style.color = "lime";
       dangerSign.current.style.backgroundColor = "lime";
+      Access.current.innerText = "Access Granted !!!"
       setTimeout(() => {
         loading.current.style.backgroundColor = "blue";
         warning.current.style.color = "blue";
@@ -32,10 +34,12 @@ const Verification = () => {
       loading.current.style.backgroundColor = "red";
       warning.current.style.color = "red";
       dangerSign.current.style.animation = "warning 1s linear infinite";
+      Access.current.innerText = "Access Denied !!!"
       setTimeout(() => {
         loading.current.style.backgroundColor = "blue";
         warning.current.style.color = "blue";
         dangerSign.current.style.animation = "none";
+        Access.current.innerText = "Verify Your Access"
       }, 3000);
     }
   }
@@ -83,7 +87,7 @@ const Verification = () => {
               <h1 ref={warning}>
                 <MdSecurity />
               </h1>
-              <h2>Verify Your Access</h2>
+              <h2 ref={Access} >Verify Your Access</h2>
               <h3>
                 Paste the token you copied in the previous step to verify your
                 Identity.
