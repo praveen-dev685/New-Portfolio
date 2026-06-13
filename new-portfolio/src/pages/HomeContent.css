@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Poppins: "Poppins", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+  --Open-Sans: "Open Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+.command-center{
+    border: 1px solid rgb(21, 68, 68);
+    padding: 10px;
+    border-radius: 10px;
+    animation: 2s linear forwards openner;
+    opacity: 0;
+}
+@keyframes openner{
+    to{
+        opacity: 1;
+    }
+}
+.head-note > h3{
+    font-family: var(--Roboto);
+    font-size: 25px;
+
+}
+.head-note > h1{
+    font-family: var(--Roboto);
+    font-size: 3.4rem;
+    font-weight: 500;
+    margin: 5px 0;
+    color: lime;
+}
+.head-note > h4{
+    font-family: var(--Roboto);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.my-note{
+    border: 2px solid rgb(91, 240, 91);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    min-height: 30vh;
+}
+
+.my-home-content{
+    max-width: 250px;
+    padding-left: 10px;
+}
+.fingerprint > h1{
+    font-size: 9rem;
+     animation: 3s linear infinite finger;
+    color: rgb(42, 177, 42);
+}
+.my-home-content > h1{
+    font-family: var(--Roboto);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: rgb(40, 199, 40);
+    margin: 10px 0;
+   
+}
+@keyframes finger{
+    25%{
+        color: rgb(0, 255, 0);
+    }
+    50%{
+        color: rgb(1, 116, 1);
+    }
+    75%{
+        color: rgb(40, 150, 40);
+    }
+}
+.my-home-content > p{
+    font-family: var(--Open-Sans);
+    font-weight: 500;
+    color: grey;
+    line-height: 30px;
+}
+.mission-note{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    min-height: 100px;
+    width: 75%;
+}
+.mission-me{
+    max-width: 250px;
+}
+.mission-me > h1{
+    font-family: var(--Roboto);
+    font-size: 20px;
+    color: rgb(19, 194, 19);
+    margin: 10px 0;
+}
+.mission-me > p{
+    font-family: var(--Open-Sans);
+    color: grey;
+}
+.rocket > h1{
+    font-size: 4rem;
+    color: limegreen;
+}
+
+.quote{
+    text-align: center;
+    font-family: var(--Poppins);
+    color: aqua;
+    margin: 10px 0;
+    font-size: 15px;
+}

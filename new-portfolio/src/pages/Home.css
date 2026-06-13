@@ -10,6 +10,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 .All-One{
   opacity: 0;
@@ -27,7 +28,7 @@ header {
   padding: 0 10px;
   background-color: black;
   color: white;
-  min-height: 100px;
+  min-height: 80px;
 }
 
 .command-name > h1 {
@@ -41,7 +42,7 @@ header {
 .granted > h1 {
   color: lime;
   font-family: var(--Roboto);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .main-class {
@@ -129,4 +130,125 @@ header {
 .session-logo > h3 {
   color: lime;
   font-size: 20px;
+}
+
+.navigation{
+  border: 2px solid lime;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 10px;
+  min-height: 300px;
+}
+.navigation > h1{
+  font-family: var(--Roboto);
+  font-size: 15px;
+  text-align: center;
+}
+.navs{
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.dest-contents{
+  margin: 0 10px;
+  font-family: var(--Roboto);
+  font-size: 13px;
+}
+.dest-contents > h3{
+  padding: 5px 0;
+  font-weight: 500;
+}
+.icons{
+  color: lime;
+  margin: 0 5px;
+}
+.dest-contents > h3:nth-child(2){
+  color: lime;
+}
+.dest-contents > h3:nth-child(1){
+  color: grey;
+}
+.navs {
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+}
+.names{
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--Roboto);
+  font-size: 13px;
+}
+.activities{
+  margin: 0 5px;
+}
+.names > h3{
+  margin: 5px 0;
+}
+.activity > h1{
+  font-family: var(--Roboto);
+  font-size: 15px;
+  color: aqua;
+  text-align: center;
+}
+.activity{
+  margin: 15px 10px;
+  border: 2px solid aqua;
+  padding: 10px;
+  border-radius: 5px;
+}
+.names > h3:nth-child(2){
+  color: lime;
+}
+.names > h3:nth-child(1){
+  color: rgb(114, 117, 117);
+}
+
+.letter{
+  background-color: lime;
+  padding: 10px;
+  color: black;
+  border: 2px solid white;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: var(--Roboto);
+  cursor: pointer;
+}
+.hamburger{
+  display:none;
+}
+.hamburger > h1{
+  color:white;
+}
+.destination{
+  display: none;
+}
+
+
+@media screen and (min-width:300px) and (max-width:375px){
+
+  .main-class{
+    min-width: 100vw;
+    padding:20px;
+  }
+  .hamburger{
+    display:block;
+  }
+
+  .access-class{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .status{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  .granted,.btn-new{
+    display: none;
+  }
+  header{
+    min-width: 100vw;
+    padding:0 10px;
+  }
+  
 }
