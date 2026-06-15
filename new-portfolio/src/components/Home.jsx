@@ -134,7 +134,7 @@ const Home = () => {
  
   useEffect(() => {
     TodayDate();
-    
+    OnlineCheck();
     Time();
     Memeory();
     WidthScreen();
