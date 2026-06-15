@@ -202,87 +202,89 @@
 }
 @media screen and (min-width:376px) and (max-width:767px)
 {
-
+   
+    .image > img{
+        height: 180px;
+        width: 180px;
+    }
     .about{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        margin-left: 100px;
         align-items: center;
     }
     .about-me-content{
-        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
-    .about-para{
-        text-align: center;
+    .about-para > h1{
+        font-size: 17px;
     }
- 
+    .about-para > h1 > span{
+        font-size: 22px;
+    }
+   
+    .about-para > p{
+        font-size: 12px;
+    }
     .other-abouts{
         display: grid;
         grid-template-columns: repeat(1,1fr);
-        justify-items: center;
-      
+    }
+    .medias{
+        width: 70%;
+        border: none;
+    }
+    .social-data > h4{
+        font-size: 12px;
+    }
+    
+
    
-    }
-    .social-data{
-        min-width: 250px;
-    }
-    .our-topic{
-        display: none;
-    }
-    .about-para > p{
-        margin: 0 15px;
-        padding: 5px 0;
-    }
-    .about-para > h1 > span{
-        font-size: 30px;
-    }
     
 }
 @media screen and (min-width:768px) and (max-width:900px)
 {
+     .main-about{
+        min-width: 45vw;
+    }
     
+     .image > img{
+        height: 180px;
+        width: 180px;
+    }
     .about{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
     .about-me-content{
-        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
-    .about-para{
-        text-align: center;
+    .about-para > h1{
+        font-size: 17px;
     }
- 
+    .about-para > h1 > span{
+        font-size: 22px;
+    }
+   
+    .about-para > p{
+        font-size: 12px;
+    }
     .other-abouts{
         display: grid;
         grid-template-columns: repeat(1,1fr);
-        justify-items: center;
-      
-   
     }
-    .social-data{
-        min-width: 250px;
-    }
-    .our-topic{
-        display: none;
-    }
-    .about-para > p{
-        margin: 0 15px;
-        border: 2px solid rgb(8, 121, 8);
-        border-radius: 5px;
-        padding: 5px 0;
-    }
-    .about-para > h1 > span{
-        font-size: 30px;
-    }
-    .main-about{
-        width: 40vw;
+    .medias{
+        width: 70%;
         border: none;
     }
-    .about-para > p{
-        border: none;
-        text-align: left;
+    .social-data > h4{
+        font-size: 12px;
     }
+    
 }
