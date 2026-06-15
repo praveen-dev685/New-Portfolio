@@ -227,7 +227,7 @@ header {
 @media screen and (min-width:100px) and (max-width:375px){
 
   .controller{
-    min-width: 130vw;
+    min-width: 120vw;
     overflow: hidden;
   }
 
@@ -238,7 +238,7 @@ header {
   }
   .hamburger{
     display:block;
-    padding-right: 20px;
+    padding-right: 10px;
   }
 
   .access-class{
