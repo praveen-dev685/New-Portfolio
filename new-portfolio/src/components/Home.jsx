@@ -141,7 +141,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="controller">
       <header>
         <div className="command-name">
           <h1>
