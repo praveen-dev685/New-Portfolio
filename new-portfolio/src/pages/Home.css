@@ -227,7 +227,7 @@ header {
 @media screen and (min-width:100px) and (max-width:375px){
 
   .controller{
-    min-width: 120vw;
+    min-width: 100vw;
     overflow: hidden;
   }
 

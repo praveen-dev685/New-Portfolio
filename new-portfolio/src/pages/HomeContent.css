@@ -123,3 +123,28 @@
     margin: 10px 0;
     font-size: 15px;
 }
+
+@media screen and (min-width:100px) and (max-width:375px){
+    .head-note > h1{
+        font-size: 20px;
+    }
+    .head-note > h3{
+        font-size: 15px;
+    }
+    .head-note > h4{
+        font-size: 13px;
+    }
+    .my-home-content > h1{
+        font-size: 15px;
+    }
+    .my-home-content > p{
+        font-size: 10px;
+    }
+    .fingerprint > h1{
+        font-size: 70px;
+    }
+    .my-note{
+        display: flex;
+        align-items: center;
+    }
+}
