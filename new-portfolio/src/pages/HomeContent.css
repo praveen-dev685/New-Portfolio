@@ -12,139 +12,150 @@
   box-sizing: border-box;
   user-select: none;
 }
-.command-center{
-    border: 1px solid rgb(21, 68, 68);
-    padding: 10px;
-    border-radius: 10px;
-    animation: 2s linear forwards openner;
-    background-image: url('../files/worldmap.png');
-    opacity: 0;
-    background-position: 100% 100%;
-    background-size: cover;
-   
+.command-center {
+  border: 1px solid rgb(21, 68, 68);
+  padding: 10px;
+  border-radius: 10px;
+  animation: 2s linear forwards openner;
+  background-image: url("../files/worldmap.png");
+  opacity: 0;
+  background-position: 100% 100%;
+  background-size: cover;
 }
-@keyframes openner{
-    to{
-        opacity: 1;
-         
-    }
+@keyframes openner {
+  to {
+    opacity: 1;
+  }
 }
-.head-note > h3{
-    font-family: var(--Roboto);
-    font-size: 25px;
-
+.head-note > h3 {
+  font-family: var(--Roboto);
+  font-size: 25px;
 }
-.head-note > h1{
-    font-family: var(--Roboto);
-    font-size: 3.4rem;
-    font-weight: 500;
-    margin: 5px 0;
-    color: lime;
+.head-note > h1 {
+  font-family: var(--Roboto);
+  font-size: 3.4rem;
+  font-weight: 500;
+  margin: 5px 0;
+  color: lime;
 }
-.head-note > h4{
-    font-family: var(--Roboto);
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 10px;
+.head-note > h4 {
+  font-family: var(--Roboto);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
-.my-note{
-    border: 2px solid rgb(91, 240, 91);
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    min-height: 30vh;
+.my-note {
+  border: 2px solid rgb(91, 240, 91);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  min-height: 30vh;
 }
 
-.my-home-content{
-    max-width: 250px;
-    padding-left: 10px;
+.my-home-content {
+  max-width: 250px;
+  padding-left: 10px;
 }
-.fingerprint > h1{
-    font-size: 9rem;
-     animation: 3s linear infinite finger;
-    color: rgb(42, 177, 42);
+.fingerprint > h1 {
+  font-size: 9rem;
+  animation: 3s linear infinite finger;
+  color: rgb(42, 177, 42);
 }
-.my-home-content > h1{
-    font-family: var(--Roboto);
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: rgb(40, 199, 40);
-    margin: 10px 0;
-   
+.my-home-content > h1 {
+  font-family: var(--Roboto);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: rgb(40, 199, 40);
+  margin: 10px 0;
 }
-@keyframes finger{
-    25%{
-        color: rgb(0, 255, 0);
-    }
-    50%{
-        color: rgb(1, 116, 1);
-    }
-    75%{
-        color: rgb(40, 150, 40);
-    }
+@keyframes finger {
+  25% {
+    color: rgb(0, 255, 0);
+  }
+  50% {
+    color: rgb(1, 116, 1);
+  }
+  75% {
+    color: rgb(40, 150, 40);
+  }
 }
-.my-home-content > p{
-    font-family: var(--Open-Sans);
-    font-weight: 500;
-    color: grey;
-    line-height: 30px;
+.my-home-content > p {
+  font-family: var(--Open-Sans);
+  font-weight: 500;
+  color: grey;
+  line-height: 30px;
 }
-.mission-note{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    min-height: 100px;
-    width: 75%;
+.mission-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  min-height: 100px;
+  width: 75%;
 }
-.mission-me{
-    max-width: 250px;
+.mission-me {
+  max-width: 250px;
 }
-.mission-me > h1{
-    font-family: var(--Roboto);
+.mission-me > h1 {
+  font-family: var(--Roboto);
+  font-size: 20px;
+  color: rgb(19, 194, 19);
+  margin: 10px 0;
+}
+.mission-me > p {
+  font-family: var(--Open-Sans);
+  color: grey;
+}
+.rocket > h1 {
+  font-size: 4rem;
+  color: limegreen;
+}
+
+.quote {
+  text-align: center;
+  font-family: var(--Poppins);
+  color: aqua;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 375px) {
+  .head-note > h1 {
     font-size: 20px;
-    color: rgb(19, 194, 19);
-    margin: 10px 0;
-}
-.mission-me > p{
-    font-family: var(--Open-Sans);
-    color: grey;
-}
-.rocket > h1{
-    font-size: 4rem;
-    color: limegreen;
-}
-
-.quote{
-    text-align: center;
-    font-family: var(--Poppins);
-    color: aqua;
-    margin: 10px 0;
+  }
+  .head-note > h3 {
     font-size: 15px;
+  }
+  .head-note > h4 {
+    font-size: 13px;
+  }
+  .my-home-content > h1 {
+    font-size: 15px;
+  }
+  .my-home-content > p {
+    font-size: 10px;
+  }
+  .fingerprint > h1 {
+    font-size: 70px;
+  }
+  .my-note {
+    display: flex;
+    align-items: center;
+    min-height: fit-content;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 799px) {
+  .my-note {
+    min-height: fit-content;
+    padding: 10px;
+  }
 }
 
-@media screen and (min-width:100px) and (max-width:375px){
-    .head-note > h1{
-        font-size: 20px;
-    }
-    .head-note > h3{
-        font-size: 15px;
-    }
-    .head-note > h4{
-        font-size: 13px;
-    }
-    .my-home-content > h1{
-        font-size: 15px;
-    }
-    .my-home-content > p{
-        font-size: 10px;
-    }
-    .fingerprint > h1{
-        font-size: 70px;
-    }
-    .my-note{
-        display: flex;
-        align-items: center;
-    }
+@media screen and (min-width: 800px) and (max-width: 950px) {
+  .my-note {
+    min-height: fit-content;
+    padding: 10px;
+  }
 }

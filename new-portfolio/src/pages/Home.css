@@ -247,7 +247,7 @@ header {
   }
   .status{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 20px 0;
   }
   .granted,.btn-new{
@@ -273,6 +273,7 @@ header {
   .destination{
     display: none;
   }
+  
   
 }
 @media screen and (min-width:376px) and (max-width:767px){
