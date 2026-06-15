@@ -224,7 +224,7 @@ header {
 }
 
 
-@media screen and (min-width:300px) and (max-width:375px){
+@media screen and (min-width:200px) and (max-width:375px){
 
   .main-class{
     min-width: 100vw;
@@ -248,7 +248,67 @@ header {
   }
   header{
     min-width: 100vw;
-    padding:0 10px;
+    padding:0 20px;
+  }
+  .hamburger > h1{
+    font-size: 50px;
+    color: limegreen;
+  }
+  .destination {
+    opacity: 0;
+    animation: 2s linear forwards menubar;
+  }
+  @keyframes menubar{
+    to{
+      opacity: 1;
+    }
+  }
+  .destination{
+    display: none;
+  }
+  
+}
+@media screen and (min-width:376px) and (max-width:767px){
+
+  .main-class{
+    min-width: 100vw;
+    padding:20px;
+  }
+  .hamburger{
+    display:block;
+  }
+
+  .access-class{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .status{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  .granted,.btn-new{
+    display: none;
+  }
+  header{
+    min-width: 100vw;
+    padding:0 20px;
+  }
+  .hamburger > h1{
+    font-size: 50px;
+    color: limegreen;
+  }
+  .destination {
+    opacity: 0;
+    animation: 2s linear forwards menubar;
+  }
+  @keyframes menubar{
+    to{
+      opacity: 1;
+    }
+  }
+  .destination{
+    display: none;
   }
   
 }

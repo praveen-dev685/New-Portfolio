@@ -15,10 +15,12 @@ import { GrProjects } from "react-icons/gr";
 import { HiOutlineNewspaper } from "react-icons/hi2";
 import { MdMenu } from "react-icons/md";
 import { FaRegPaperPlane } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import HomeContent from "./HomeContent";
 import Skills from "./Skills";
+import Profile from "./Profile";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -29,11 +31,11 @@ const Home = () => {
   const [time, setTime] = useState();
   const [memory, setMemory] = useState();
   const [day, setDay] = useState("");
-  const [page,setPage] = useState(<HomeContent/>);
+  const [page, setPage] = useState(<HomeContent />);
   const letterOpen = useRef();
-  const [letter,setLetter] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  const [letter, setLetter] = useState();
   const menuAccess = useRef();
-  const [accessMenu,setAccessMenu] = useState(false);
 
   async function Access() {
     if (await localStorage.getItem("Access_Token")) {
@@ -64,7 +66,7 @@ const Home = () => {
     }
 
     let val;
-    if (hours >= 13) {
+    if (hours >= 12) {
       val = hours - 12 + ":" + minute + " PM";
     } else {
       val = hours + ":" + minute + " AM";
@@ -111,33 +113,28 @@ const Home = () => {
 
   // }
 
-  function Menu(){
 
-    if(accessMenu){
-       menuAccess.current.style.display = "block";
-       setAccessMenu(false)
+  function toggleMenu() {
+    setIsOpen(!isOpen);
+
+    if (!isOpen) {
+      menuAccess.current.style.display = "block";
+    } else {
+      menuAccess.current.style.display = "none";
     }
-    else{
-       menuAccess.current.style.display = "none";
-       setAccessMenu(true)
-
-    }
-
   }
 
-  function WidthScreen(){
-    if(screen.width >= 1024){
+  function WidthScreen() {
+    if (screen.width >= 768) {
       menuAccess.current.style.display = "block";
     }
   }
 
 
-
-
-
+ 
   useEffect(() => {
     TodayDate();
-    OnlineCheck();
+    
     Time();
     Memeory();
     WidthScreen();
@@ -160,7 +157,9 @@ const Home = () => {
         </div>
 
         <div className="hamburger">
-          <h1 onClick={Menu}><MdMenu /></h1>
+          <h1 onClick={toggleMenu}>
+            {isOpen ? <AiOutlineClose /> : <MdMenu />}
+          </h1>
         </div>
       </header>
 
@@ -298,55 +297,60 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="home-contents">
-            {page}
-          </div>
+          <div className="home-contents">{page  }</div>
 
           <div className="destination" ref={menuAccess}>
             <div className="navigation">
               <h1>SELECT DESTINATION</h1>
-              <div className="navs" onClick={()=>setPage(<HomeContent/>)} >
+              <div className="navs" onClick={() => setPage(<HomeContent />)}>
                 <div className="icons">
-                  <h1 ><FaUserSecret /></h1>
-        
+                  <h1>
+                    <FaUserSecret />
+                  </h1>
                 </div>
                 <div className="dest-contents">
-                    <h3>DEVELOPER ID</h3>
-                    <h3>Who am I ?</h3>
+                  <h3>DEVELOPER ID</h3>
+                  <h3>Who am I ?</h3>
                 </div>
               </div>
-              <div className="navs"  onClick={()=>setPage(<Skills/>)}>
+              <div className="navs" onClick={() => setPage(<Skills />)}>
                 <div className="icons">
-                  <h1 ><SlChemistry /></h1>
-              
-                  
+                  <h1>
+                    <SlChemistry />
+                  </h1>
                 </div>
-                <div className="dest-contents" >
+                <div className="dest-contents">
                   <h3>SKILL LAB</h3>
                   <h3>What I know ?</h3>
                 </div>
               </div>
               <div className="navs">
                 <div className="icons">
-                  <h1><GrProjects /></h1>
+                  <h1>
+                    <GrProjects />
+                  </h1>
                 </div>
                 <div className="dest-contents">
                   <h3>PROJECT VALUT </h3>
-                  <h3>What I 've built  ?</h3>
+                  <h3>What I 've built ?</h3>
                 </div>
               </div>
-              <div className="navs">
+              <div className="navs"  onClick={() => setPage(<Profile />)}>
                 <div className="icons">
-                  <h1><HiOutlineNewspaper /></h1>
+                  <h1>
+                    <HiOutlineNewspaper />
+                  </h1>
                 </div>
                 <div className="dest-contents">
-                  <h3>RESUME ARCHIVE</h3>
+                  <h3>ABOUT ME</h3>
                   <h3>My Professional story</h3>
                 </div>
               </div>
               <div className="navs">
                 <div className="icons">
-                  <h1><FaRegPaperPlane /></h1>
+                  <h1>
+                    <FaRegPaperPlane />
+                  </h1>
                 </div>
                 <div className="dest-contents">
                   <h3>CONTACT CENTER</h3>

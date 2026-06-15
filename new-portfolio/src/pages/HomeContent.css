@@ -17,11 +17,16 @@
     padding: 10px;
     border-radius: 10px;
     animation: 2s linear forwards openner;
+    background-image: url('../files/worldmap.png');
     opacity: 0;
+    background-position: 100% 100%;
+    background-size: cover;
+   
 }
 @keyframes openner{
     to{
         opacity: 1;
+         
     }
 }
 .head-note > h3{
