@@ -130,11 +130,14 @@ const Home = () => {
     }
   }
 
+  setInterval(()=>{
+    OnlineCheck();
+  },1000)
+
 
  
   useEffect(() => {
     TodayDate();
-    OnlineCheck();
     Time();
     Memeory();
     WidthScreen();
