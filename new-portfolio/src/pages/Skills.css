@@ -14,9 +14,14 @@
 }
 
 .skills-box {
+
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  min-width: 500px;
+  grid-template-columns: repeat(1, 1fr);
   opacity: 0;
+  background-image: url("../files/worldmap.png");
+  background-size: cover;
+  background-position: 100% 100%;
   animation: 2s linear forwards skillshower;
 }
 @keyframes skillshower {
@@ -25,22 +30,22 @@
   }
 }
 .frontend-box {
-  width: 300px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   place-items: center;
   min-height: 200px;
-
+  gap: 20px;
   border-radius: 5px;
   margin: 15px;
 }
 
 .tools-box {
-  width: 300px;
+  width: 100%;
 
   border-radius: 5px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   place-items: center;
   min-height: 200px;
   margin: 15px;
@@ -75,6 +80,7 @@
   .skills-box {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    min-width: 200px;
    
 
   }
@@ -92,9 +98,11 @@
    margin: 0 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+      width: 100%;
   }
  
   .tools-box {
+      width: 100%;
     margin: 0 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -104,6 +112,7 @@
   .skills-box {
     display: grid;
     padding: 0 10px;
+    min-width: 300px;
     grid-template-columns: repeat(1, 1fr);
   }
   .frontend-icon > h1 {
@@ -117,6 +126,7 @@
   }
   .frontend-box {
     margin: 10px;
+      width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -124,6 +134,7 @@
 
   .tools-box {
     display: grid;
+      width: 100%;
     grid-template-columns: repeat(3, 1fr);
     margin: 10px;
   }
@@ -131,7 +142,8 @@
 @media screen and (min-width: 501px) and (max-width: 767px) {
   .skills-box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    min-width: 200px;
   }
   .frontend-icon > h1 {
     font-size: 45px;
@@ -144,16 +156,19 @@
   }
   .frontend-box {
     margin: 10px;
+    width: 100%;
   }
 
   .tools-box {
     margin: 10px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .skills-box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    min-width: 300px;
   }
   .frontend-icon > h1 {
     font-size: 30px;
@@ -165,11 +180,11 @@
     font-size: 30px;
   }
   .frontend-box {
-    width: 130px;
+    width: 100%;
   }
  
   .tools-box {
-    width: 130px;
+    width: 100%;
   }
   
 }

@@ -152,9 +152,7 @@ const Home = () => {
         <div className="granted">
           <h1>C:\Users\Praveen\Portfolio </h1>
         </div>
-        <div className="btn-new">
-          <button className="letter">See The Letter</button>
-        </div>
+       
 
         <div className="hamburger">
           <h1 onClick={toggleMenu}>
