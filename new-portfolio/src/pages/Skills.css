@@ -102,12 +102,18 @@
   }
   .frontend-box {
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   .backend-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: 0;
   }
   .tools-box {
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 376px) and (max-width: 500px) {
