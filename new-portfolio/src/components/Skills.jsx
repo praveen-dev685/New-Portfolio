@@ -1,7 +1,7 @@
 import React from "react";
 import { IoLogoHtml5 } from "react-icons/io5";
 import { FaCss3Alt } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import { SiJavascript, SiNetlify, SiPostman } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 import { DiDjango } from "react-icons/di";
@@ -24,13 +24,14 @@ const Skills = () => {
     { name: "API", color: "#FF6C37" },
     { name: "MySQL", color: "#4479A1" },
     { name: "VS Code", color: "#007ACC" },
+    { name: "Postman", color: "orangered" },
+    { name: "netlify", color: "#07d8f3" },
 
   ];
 
   return (
     <>
       <div className="main-skills-box">
-        <h1>MY SKILLS</h1>
         <div className="skills-box">
           <div className="frontend-box">
             <div className="front-skills">
@@ -61,8 +62,6 @@ const Skills = () => {
                 </h1>
               </div>
             </div>
-          </div>
-          <div className="backend-box">
             <div className="backend-skills">
               <div className="backend-icon">
                 <h1 title="PYTHON">
@@ -118,6 +117,20 @@ const Skills = () => {
               <div className="tools-icon">
                 <h1 title="GITHUB CO-PILOT">
                   <SiGithubcopilot />
+                </h1>
+              </div>
+            </div>
+            <div className="tools-skills">
+              <div className="tools-icon">
+                <h1 title="POSTMAN" style={colors[9]}>
+                  <SiPostman />
+                </h1>
+              </div>
+            </div>
+            <div className="tools-skills">
+              <div className="tools-icon">
+                <h1 title="NETLIFY" style={colors[10]}>
+                  <SiNetlify />
                 </h1>
               </div>
             </div>

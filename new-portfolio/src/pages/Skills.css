@@ -30,27 +30,15 @@
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
   min-height: 200px;
+
+  border-radius: 5px;
   margin: 15px;
 }
-.backend-box {
-  width: 300px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
-  min-height: 200px;
-  margin: 15px;
-}
+
 .tools-box {
   width: 300px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
-  min-height: 200px;
-  margin: 15px;
-}
-.libraries {
-  padding: 10px;
-  width: 300px;
+
+  border-radius: 5px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
@@ -58,10 +46,7 @@
   margin: 15px;
 }
 
-.main-skills-box > h1 {
-  font-family: var(--Roboto);
-  color: lime;
-}
+
 .frontend-icon > h1 {
   font-size: 45px;
   animation: fullstack 10s linear infinite;
@@ -90,28 +75,27 @@
   .skills-box {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+   
+
   }
   .frontend-icon > h1 {
-    font-size: 30px;
+    font-size: 35px;
+    margin: 5px;
   }
   .backend-icon > h1 {
-    font-size: 30px;
+    font-size: 35px;
   }
   .tools-icon > h1 {
-    font-size: 30px;
+    font-size: 35px;
   }
   .frontend-box {
-    margin: 0;
+   margin: 0 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .backend-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0;
-  }
+ 
   .tools-box {
-    margin: 0;
+    margin: 0 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -126,21 +110,17 @@
     font-size: 40px;
   }
   .backend-icon > h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
   .tools-icon > h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
   .frontend-box {
     margin: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .backend-box {
-    margin: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+ 
 
   .tools-box {
     display: grid;
@@ -154,20 +134,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .frontend-icon > h1 {
-    font-size: 35px;
+    font-size: 45px;
   }
   .backend-icon > h1 {
-    font-size: 35px;
+    font-size: 45px;
   }
   .tools-icon > h1 {
-    font-size: 35px;
+    font-size: 45px;
   }
   .frontend-box {
     margin: 10px;
   }
-  .backend-box {
-    margin: 10px;
-  }
+
   .tools-box {
     margin: 10px;
   }
@@ -189,9 +167,7 @@
   .frontend-box {
     width: 130px;
   }
-  .backend-box {
-    width: 130px;
-  }
+ 
   .tools-box {
     width: 130px;
   }
