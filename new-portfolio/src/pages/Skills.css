@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Poppins: "Poppins", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+  --Open-Sans: "Open Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.skills-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  opacity: 0;
+  animation: 2s linear forwards skillshower;
+}
+@keyframes skillshower{
+    to{
+        opacity: 1;
+    }
+}
+.frontend-box {
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  min-height: 200px;
+  margin: 15px;
+}
+.backend-box {
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  min-height: 200px;
+  margin: 15px;
+}
+.tools-box {
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  min-height: 200px;
+  margin: 15px;
+}
+.libraries {
+  padding: 10px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  min-height: 200px;
+  margin: 15px;
+}
+
+.main-skills-box > h1 {
+  font-family: var(--Roboto);
+  color: lime;
+}
+.frontend-icon > h1 {
+  font-size: 45px;
+  animation: fullstack 10s linear infinite;
+}
+.backend-icon > h1 {
+  font-size: 45px;
+  animation: fullstack 10s linear infinite;
+}
+.tools-icon > h1 {
+  font-size: 45px;
+  animation: fullstack 10s linear infinite;
+}
+
+@keyframes fullstack {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.libararies-text > h3 {
+  font-family: var(--Roboto);
+  font-size: 15px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 375px) {
+  .skills-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .frontend-icon > h1 {
+    font-size: 30px;
+  }
+  .backend-icon > h1 {
+    font-size: 30px;
+  }
+  .tools-icon > h1 {
+    font-size: 30px;
+  }
+  .frontend-box{
+    margin: 0;
+  }
+  .backend-box{
+    margin: 0;
+  }
+  .tools-box{
+    margin: 0;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 500px) {
+  .skills-box {
+    display: grid;
+    padding: 0 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .frontend-icon > h1 {
+    font-size: 35px;
+  }
+  .backend-icon > h1 {
+    font-size: 35px;
+  }
+  .tools-icon > h1 {
+    font-size: 35px;
+  }
+  .frontend-box{
+    margin: 10px;
+  }
+  .backend-box{
+    margin: 10px;
+  }
+  .tools-box{
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 767px) {
+  .skills-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .frontend-icon > h1 {
+    font-size: 35px;
+  }
+  .backend-icon > h1 {
+    font-size: 35px;
+  }
+  .tools-icon > h1 {
+    font-size: 35px;
+  }
+  .frontend-box{
+    margin: 10px;
+  }
+  .backend-box{
+    margin: 10px;
+  }
+  .tools-box{
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .skills-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .frontend-icon > h1 {
+    font-size: 30px;
+  }
+  .backend-icon > h1 {
+    font-size: 30px;
+  }
+  .tools-icon > h1 {
+    font-size: 30px;
+  }
+  .frontend-box{
+    width: 150px;
+  }
+  .backend-box{
+
+    width: 150px;
+  }
+  .tools-box{
+    width: 150px;
+  }
+  .libraries{
+    width: 150px;
+  }
+  .libararies-text > h3{
+    font-size: 10px;
+  }
+}
