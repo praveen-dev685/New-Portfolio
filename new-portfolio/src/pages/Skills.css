@@ -19,10 +19,10 @@
   opacity: 0;
   animation: 2s linear forwards skillshower;
 }
-@keyframes skillshower{
-    to{
-        opacity: 1;
-    }
+@keyframes skillshower {
+  to {
+    opacity: 1;
+  }
 }
 .frontend-box {
   width: 300px;
@@ -84,16 +84,12 @@
   }
 }
 
-.libararies-text > h3 {
-  font-family: var(--Roboto);
-  font-size: 15px;
-}
+
 
 @media screen and (min-width: 100px) and (max-width: 375px) {
   .skills-box {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-
   }
   .frontend-icon > h1 {
     font-size: 30px;
@@ -104,13 +100,13 @@
   .tools-icon > h1 {
     font-size: 30px;
   }
-  .frontend-box{
+  .frontend-box {
     margin: 0;
   }
-  .backend-box{
+  .backend-box {
     margin: 0;
   }
-  .tools-box{
+  .tools-box {
     margin: 0;
   }
 }
@@ -121,7 +117,7 @@
     grid-template-columns: repeat(1, 1fr);
   }
   .frontend-icon > h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
   .backend-icon > h1 {
     font-size: 35px;
@@ -129,13 +125,20 @@
   .tools-icon > h1 {
     font-size: 35px;
   }
-  .frontend-box{
+  .frontend-box {
     margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .backend-box{
+  .backend-box {
     margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .tools-box{
+
+  .tools-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: 10px;
   }
 }
@@ -153,13 +156,13 @@
   .tools-icon > h1 {
     font-size: 35px;
   }
-  .frontend-box{
+  .frontend-box {
     margin: 10px;
   }
-  .backend-box{
+  .backend-box {
     margin: 10px;
   }
-  .tools-box{
+  .tools-box {
     margin: 10px;
   }
 }
@@ -177,20 +180,14 @@
   .tools-icon > h1 {
     font-size: 30px;
   }
-  .frontend-box{
+  .frontend-box {
     width: 130px;
   }
-  .backend-box{
-
+  .backend-box {
     width: 130px;
   }
-  .tools-box{
+  .tools-box {
     width: 130px;
   }
-  .libraries{
-    width: 150px;
-  }
-  .libararies-text > h3{
-    font-size: 10px;
-  }
+  
 }

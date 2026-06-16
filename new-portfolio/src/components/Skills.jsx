@@ -122,20 +122,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="libraries">
-            <div className="libararies-text">
-              <h3>REACT ROUTER DOM</h3>
-            </div>
-            <div className="libararies-text">
-              <h3>REACT ICONS</h3>
-            </div>
-            <div className="libararies-text">
-              <h3>JWT ( JSON WEB TOKEN )</h3>
-            </div>
-            <div className="libararies-text">
-              <h3>AXIOS</h3>
-            </div>
-          </div>
+
         </div>
       </div>
     </>
