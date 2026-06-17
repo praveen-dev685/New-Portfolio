@@ -55,6 +55,17 @@ const Home = () => {
     }
   }
 
+  async function NetworkCheck() {
+    if ((await navigator.onLine) == false) {
+      await alert(
+        "Your Mobile Data or Wifi is currently Off . please re-login !!!",
+      );
+      await localStorage.removeItem("Access_Token");
+      await localStorage.removeItem("userName");
+      await navigate("/");
+    }
+  }
+
   function Time() {
     let date = new Date();
     let hours = date.getHours();
@@ -102,6 +113,7 @@ const Home = () => {
 
   setTimeout(() => {
     Access();
+    NetworkCheck();
   }, 2000);
 
   // function OpenLetter(){
@@ -112,7 +124,6 @@ const Home = () => {
   //   }
 
   // }
-
 
   function toggleMenu() {
     setIsOpen(!isOpen);
@@ -130,12 +141,10 @@ const Home = () => {
     }
   }
 
-  setInterval(()=>{
+  setInterval(() => {
     OnlineCheck();
-  },1000)
+  }, 1000);
 
-
- 
   useEffect(() => {
     TodayDate();
     Time();
@@ -155,7 +164,6 @@ const Home = () => {
         <div className="granted">
           <h1>C:\Users\Praveen\Portfolio </h1>
         </div>
-       
 
         <div className="hamburger">
           <h1 onClick={toggleMenu}>
@@ -298,7 +306,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="home-contents">{page  }</div>
+          <div className="home-contents">{page}</div>
 
           <div className="destination" ref={menuAccess}>
             <div className="navigation">
@@ -336,7 +344,7 @@ const Home = () => {
                   <h3>What I 've built ?</h3>
                 </div>
               </div>
-              <div className="navs"  onClick={() => setPage(<Profile />)}>
+              <div className="navs" onClick={() => setPage(<Profile />)}>
                 <div className="icons">
                   <h1>
                     <HiOutlineNewspaper />
