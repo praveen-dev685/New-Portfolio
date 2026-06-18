@@ -11,7 +11,7 @@ import { PiDevicesLight } from "react-icons/pi";
 import { FaCalendarDays } from "react-icons/fa6";
 import { FaUserSecret } from "react-icons/fa6";
 import { SlChemistry } from "react-icons/sl";
-import { GrProjects } from "react-icons/gr";
+import { GrCertificate, GrProjects } from "react-icons/gr";
 import { HiOutlineNewspaper } from "react-icons/hi2";
 import { MdMenu } from "react-icons/md";
 import { FaRegPaperPlane } from "react-icons/fa";
@@ -21,6 +21,9 @@ import { NavLink, useNavigate } from "react-router-dom";
 import HomeContent from "./HomeContent";
 import Skills from "./Skills";
 import Profile from "./Profile";
+import Projects from "./Projects";
+import Certification from "./Certification";
+import Contact from "./Contact";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -55,16 +58,7 @@ const Home = () => {
     }
   }
 
-  async function NetworkCheck() {
-    if ((await navigator.onLine) == false) {
-      await alert(
-        "Your Mobile Data or Wifi is currently Off . please re-login !!!",
-      );
-      await localStorage.removeItem("Access_Token");
-      await localStorage.removeItem("userName");
-      await navigate("/");
-    }
-  }
+  
 
   function Time() {
     let date = new Date();
@@ -113,7 +107,7 @@ const Home = () => {
 
   setTimeout(() => {
     Access();
-    NetworkCheck();
+
   }, 2000);
 
   // function OpenLetter(){
@@ -333,7 +327,7 @@ const Home = () => {
                   <h3>What I know ?</h3>
                 </div>
               </div>
-              <div className="navs">
+              <div className="navs" onClick={()=> setPage(<Projects />)}>
                 <div className="icons">
                   <h1>
                     <GrProjects />
@@ -355,7 +349,18 @@ const Home = () => {
                   <h3>My Professional story</h3>
                 </div>
               </div>
-              <div className="navs">
+              <div className="navs" onClick={()=>{setPage(<Certification />)}}>
+                <div className="icons">
+                  <h1>
+                    <GrCertificate />
+                  </h1>
+                </div>
+                <div className="dest-contents">
+                  <h3>CERTIFICATIONS</h3>
+                  <h3>Proof of My Learning</h3>
+                </div>
+              </div>
+              <div className="navs" onClick={()=>setPage(<Contact />)}>
                 <div className="icons">
                   <h1>
                     <FaRegPaperPlane />
@@ -367,7 +372,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="activity">
+            {/* <div className="activity">
               <h1>SYSTEM ACTIVITY</h1>
               <div className="activities">
                 <div className="names">
@@ -387,7 +392,7 @@ const Home = () => {
                   <h3>12 Active</h3>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

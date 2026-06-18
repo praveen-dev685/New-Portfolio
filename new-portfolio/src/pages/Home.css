@@ -264,6 +264,10 @@ header {
   .destination {
     opacity: 0;
     animation: 2s linear forwards menubar;
+    
+  }
+  .navigation{
+    margin-bottom: 30px;
   }
   @keyframes menubar{
     to{
@@ -318,6 +322,9 @@ header {
   }
   .destination{
     display: none;
+  }
+  .navigation{
+    margin-bottom: 30px;
   }
   
 }

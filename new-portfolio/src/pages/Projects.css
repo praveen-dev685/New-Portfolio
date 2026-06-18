@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Poppins: "Poppins", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+  --Open-Sans: "Open Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.main-project-box {
+  width: 500px;
+  overflow: hidden;
+  opacity: 0;
+  animation: commer 2s linear forwards;
+}
+@keyframes commer{
+    to{
+        opacity: 1;
+    }
+}
+
+.project-box > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.project-box > h3 {
+  width: 100%;
+  font-family: var(--Roboto);
+  margin: 10px;
+}
+.project-box > h3:nth-child(3) {
+  height: 100px;
+  font-size: 17px;
+  width: 90%;
+  color: grey;
+}
+.project-box > h3:nth-child(2) {
+  font-size: 20px;
+  color: lime;
+}
+
+.val {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.val > button {
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: crimson;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  font-size: 15px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 375px) {
+  .main-project-box {
+    width: 300px;
+    
+  }
+  .val{
+    margin-right: 10px;
+  }
+  .project-box > h3:nth-child(3) {
+    height: 100px;
+    font-size: 13px;
+    width: 90%;
+  }
+  .project-box > h3:nth-child(2) {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 500px) {
+  .main-project-box {
+    width: 380px;
+    
+  }
+  .val{
+    margin-right: 10px;
+  }
+  .project-box > h3:nth-child(3) {
+    height: 100px;
+    font-size: 13px;
+    width: 90%;
+  }
+  .project-box > h3:nth-child(2) {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .main-project-box {
+    width: 300px;
+  }
+  .project-box > h3:nth-child(3) {
+    height: 100px;
+    font-size: 15px;
+    width: 90%;
+  }
+  .project-box > h3:nth-child(2) {
+    font-size: 20px;
+  }
+}
+.project-box > h3:nth-child(3){
+    height: 100px;
+    font-size: 15px;
+    width: 90%;
+    color: grey;
+}
+.project-box > h3:nth-child(2){
+    font-size: 20px;
+    color: lime;
+}
