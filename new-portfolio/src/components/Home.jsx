@@ -65,7 +65,7 @@ const Home = () => {
     let hours = date.getHours();
     let minute = date.getMinutes();
 
-    if (minute <= 10) {
+    if (minute < 10) {
       let addMin = "0" + minute;
       minute = addMin;
     }
