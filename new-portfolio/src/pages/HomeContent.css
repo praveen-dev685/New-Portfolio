@@ -83,7 +83,7 @@
 .my-home-content > p {
   font-family: var(--Open-Sans);
   font-weight: 500;
-  color: grey;
+  color: rgb(228, 221, 221);
   line-height: 30px;
 }
 .mission-note {
